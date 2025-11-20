@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koeing Enterprices</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <img class="nav-logo" src="img/logo.webp" alt="Logo">
+
+        <div class="nav-gap" id="nav-links">
+            <a href="#home" class="btn">HOME</a>
+            <a href="#about" class="btn">ABOUT US</a>
+            <a href="#contact" class="btn">PRODUCTS</a>
+            <a href="#services" class="btn">SERVICES</a>
+            <a href="projects" class="btn">PROJECTS</a>
+            <a href="gallery" class="btn">GALLERY</a>
+            <a href="contact" class="btn">CONTACT US</a>
+        </div>
+    </nav>
+
+    <section class="container">
+
+        <div class="slider-wrapper">
+
+            <div class="slider">
+                <img id="slide-1" src="img/Ban.jpg" alt="3D rendering of an imaginary orange planet in space"
+                    class="active" />
+                <div class="slide-caption">
+                    <h1>Welcome To</h1>
+                    <h3>Koeing Enterprices</h3>
+                    <p>Short descriptive paragraph for the first slide. Highlight key message or CTA here.</p>
+                </div>
+
+                <img id="slide-2" src="img/Ban2.jpg" alt="3D rendering of an imaginary green planet in space" />
+                <div class="slide-caption">
+                    <h1>Main Heading 2</h1>
+                    <h3>Sub-heading for slide 2</h3>
+                    <p>Short descriptive paragraph for the second slide. Use this to explain the image.</p>
+                </div>
+
+                <img id="slide-3" src="img/Ban4.jpg" alt="3D rendering of an imaginary blue planet in space" />
+                <div class="slide-caption">
+                    <h1>Main Heading 3</h1>
+                    <h3>Sub-heading for slide 3</h3>
+                    <p>Short descriptive paragraph for the third slide. Add a call to action if needed.</p>
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <a href="#slide-1" data-index="0" class="active">1</a>
+                <a href="#slide-2" data-index="1">2</a>
+                <a href="#slide-3" data-index="2">3</a>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                const slides = document.querySelectorAll('.slider img');
+                const dots = document.querySelectorAll('.slider-nav a');
+                let current = 0;
+                const show = i => {
+                    slides.forEach(s => s.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+                    slides[i].classList.add('active');
+                    dots[i].classList.add('active');
+                };
+                show(0);
+
+                let interval = setInterval(() => {
+                    current = (current + 1) % slides.length;
+                    show(current);
+                }, 2000); // 2000ms = 2 seconds
+
+                dots.forEach((dot, idx) => {
+                    dot.addEventListener('click', e => {
+                        e.preventDefault();
+                        current = idx;
+                        show(current);
+                        clearInterval(interval);
+                        interval = setInterval(() => {
+                            current = (current + 1) % slides.length;
+                            show(current);
+                        }, 2000);
+                    });
+                });
+            })();
+        </script>
+    </section>
+
+    <div class="h-cards">
+        <div class="h-card">
+            <div class="h-c-logo"><img src="img/card-t.png" alt="team"></div>
+            <div>
+                <h1>Expert Team</h1>
+            </div>
+            <div>
+                <h4>Our engineers are More than 25 years of experienced in this industry.</h4>
+            </div>
+            <div class="h-card-action">
+                <button class="view-more" type="button">View More</button>
+            </div>
+        </div>
+        <div class="h-card">
+            <div class="h-c-logo"><img src="img/card-t.png" alt="team"></div>
+            <div>
+                <h1>Quality Products</h1>
+            </div>
+            <div>
+                <h4>Offering high-quality, effective, Precise products is our specialty.</h4>
+            </div>
+            <div class="h-card-action">
+                <button class="view-more" type="button">View More</button>
+            </div>
+        </div>
+        <div class="h-card">
+            <div class="h-c-logo"><img src="img/card-t.png" alt="team"></div>
+            <div>
+                <h1>Advanced Technology</h1>
+            </div>
+            <div>
+                <h4>To provide the world class advanced technology for all our products..</h4>
+            </div>
+            <div class="h-card-action">
+                <button class="view-more" type="button">View More</button>
+            </div>
+        </div>
+        <div class="h-card">
+            <div class="h-c-logo"><img src="img/card-t.png" alt="team"></div>
+            <div>
+                <h1>24/7 Customer Support</h1>
+            </div>
+            <div>
+                <h4>Call us on our 24 x 7 helpline to contact for any enquires!</h4>
+            </div>
+            <div class="h-card-action">
+                <button class="view-more" type="button">View More</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="about-section content">
+        <div class="about-entry">
+            <div class="about-content-wrapper clearfix">
+                <div class="about-image-container">
+                    <img src="img/abt.jpg" alt="About us" width="500" height="330" class="about-image">
+                </div>
+                <div class="about-text-container">
+                    <h2>About Koenig Conveyors Private Limited</h2>
+                    <p>
+                        Koenig Conveyors Private Limited (KCPL) established in 2017 by Mr. K Balasingh Gnanaraj,
+                        Mechanical engineer with more than 25 years of experiences from reputed organisations M/s Fuller
+                        India and M/s FLSmidth India who is expertise in design, engineering and supervision of erection
+                        & commissioning in the field of Pneumatic and Mechanical bulk handling system.
+
+
+                    </p>
+                    <a href="about.html" class="about-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="machine-section">
+        <div class="section-header">
+            <h2>OUR MACHINERIES</h2>
+            <h1>VMC, HMC Machines & Equipments</h1>
+        </div>
+
+        <div class="machine-container">
+
+            <!-- Box 1 -->
+            <div class="machine-box">
+                <img src="img/pt-sys.jpg" alt="">
+                <div class="top-blue-line"></div>
+                <div class="machine-title">Pneumatic Conveying System</div>
+                <a href="#" class="machine-btn">Read More</a>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="machine-box">
+                <img src="img/Bin-Weighing-and-Dozing-System.jpg" alt="">
+                <div class="top-blue-line"></div>
+                <div class="machine-title">Blending & Storage System</div>
+                <a href="#" class="machine-btn">Read More</a>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="machine-box">
+                <img src="img/Apron-Feeders.jpg" alt="">
+                <div class="top-blue-line"></div>
+                <div class="machine-title">Mechanical Conveyors</div>
+                <a href="#" class="machine-btn">Read More</a>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="machine-box">
+                <img src="img/Koenig-Arc-Valve.jpg" alt="">
+                <div class="top-blue-line"></div>
+                <div class="machine-title">Gates & Valves</div>
+                <a href="#" class="machine-btn">Read More</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="strengths-section">
+
+        <div class="strengths-title">Our Strengths</div>
+        <div class="title-underline"></div>
+
+        <div class="strengths-grid">
+
+            <div class="strength-box">
+                <img src="img/cup.png" alt="" style="display:block;margin:0 auto;">
+                <div class="strength-text">30+ Years Experience</div>
+            </div>
+
+            <div class="strength-box">
+                <img src="img/t-up.png" alt="" style="display:block;margin:0 auto;">
+                <div class="strength-text">Quality Assurance</div>
+            </div>
+
+            <div class="strength-box">
+                <img src="img/card-t.png" alt="" style="display:block;margin:0 auto;">
+                <div class="strength-text">Expert Team</div>
+            </div>
+
+            <div class="strength-box">
+                <img src="img/cr-card.png" alt="" style="display:block;margin:0 auto;">
+                <div class="strength-text">Competitive Price</div>
+            </div>
+
+            <div class="strength-box">
+                <img src="img/clock.png" alt="" style="display:block;margin:0 auto;">
+                <div class="strength-text">Customer Support 24/7</div>
+            </div>
+
+            <div class="strength-box">
+                <img src="img/idea.png" alt="" style="display:block;margin:0 auto;">
+                <div class="strength-text">State of the Art Technology</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT CONTACT INFO -->
+        <div class="contact-info-box">
+            <h2 class="contact-title">Contact Us</h2>
+
+            <p class="contact-desc">
+                Get in touch with us for any material handling solution related queries.
+            </p>
+
+            <!-- Address -->
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/535/535188.png" class="contact-icon" alt="">
+                <div>
+                    <h3>Address</h3>
+                    <p>No. 4/8, 10th Cross Street, Sastri Nagar, Adyar,<br>
+                        Chennai, 600020, India.</p>
+                </div>
+            </div>
+
+            <!-- Call -->
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/13/13936.png" class="contact-icon" alt="">
+                <div>
+                    <h3>Call Us</h3>
+                    <p>+91 44 2446 1838<br>
+                        +91 99414 90580<br>
+                        +91 93424 47980</p>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" class="contact-icon" alt="">
+                <div>
+                    <h3>Email</h3>
+                    <p><strong>For Enquiries:</strong><br>
+                        marketing@koenigconveyors.com<br><br>
+
+                        <strong>For General Information:</strong><br>
+                        info@koenigconveyors.com
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="contact-form-box">
+            <h2 class="form-title">How can we Serve?</h2>
+            <div class="title-line"></div>
+
+            <p class="form-desc">
+                Interested in our Products? Get in touch with us via the form below and we’ll get back to you as soon as
+                possible!
+            </p>
+
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Mobile">
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <textarea placeholder="Message"></textarea>
+
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo + About -->
+            <div class="footer-box">
+                <img src="img/logo.webp" alt="Koenig Conveyors" class="footer-logo">
+
+                <p class="footer-text">
+                    Koenig Conveyors Private Limited (KCPL) established in 2017 by
+                    Mr. K Balasingh Gnanaraj, Mechanical engineer with more than
+                    25 years of experience.
+                </p>
+
+                <a href="#" class="read-more">READ MORE</a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-box">
+                <h3 class="footer-title">Contact Us</h3>
+                <p class="footer-text">
+                    No. 4/8, 10th Cross Street, Sastri Nagar,<br>
+                    Adyar, Chennai, 600020, India.
+                </p>
+                <p class="footer-text">+91 44 2446 1838</p>
+                <p class="footer-text">+91 9941 4905 80</p>
+                <p class="footer-text">koenigconveyors@gmail.com</p>
+                <p class="footer-text">info@koenigconveyors.com</p>
+            </div>
+
+            <!-- Back to top -->
+            <div class="footer-box back-to-top-box">
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="top-btn">
+                    ↑
+                </button>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            Designed & Developed by <b>Alwin</b>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
