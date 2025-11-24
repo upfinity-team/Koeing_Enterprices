@@ -26,70 +26,75 @@
     <section class="container">
 
         <div class="slider-wrapper">
-
             <div class="slider">
-                <img id="slide-1" src="img/Ban.jpg" alt="3D rendering of an imaginary orange planet in space"
-                    class="active" />
-                <div class="slide-caption">
-                    <h1>Welcome To</h1>
-                    <h3>Koeing Enterprices</h3>
-                    <p>Short descriptive paragraph for the first slide. Highlight key message or CTA here.</p>
-                </div>
+                <div class="slide">
+                    <video autoplay loop muted playsinline class="s-vdo">
+                        <source src="img/home.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
 
-                <img id="slide-2" src="img/Ban2.jpg" alt="3D rendering of an imaginary green planet in space" />
-                <div class="slide-caption">
-                    <h1>Main Heading 2</h1>
-                    <h3>Sub-heading for slide 2</h3>
-                    <p>Short descriptive paragraph for the second slide. Use this to explain the image.</p>
+                    <div class="hero-caption" aria-live="polite">
+                    </div>
                 </div>
-
-                <img id="slide-3" src="img/Ban4.jpg" alt="3D rendering of an imaginary blue planet in space" />
-                <div class="slide-caption">
-                    <h1>Main Heading 3</h1>
-                    <h3>Sub-heading for slide 3</h3>
-                    <p>Short descriptive paragraph for the third slide. Add a call to action if needed.</p>
-                </div>
-            </div>
-
-            <div class="slider-nav">
-                <a href="#slide-1" data-index="0" class="active">1</a>
-                <a href="#slide-2" data-index="1">2</a>
-                <a href="#slide-3" data-index="2">3</a>
             </div>
         </div>
 
         <script>
             (function () {
-                const slides = document.querySelectorAll('.slider img');
-                const dots = document.querySelectorAll('.slider-nav a');
-                let current = 0;
-                const show = i => {
-                    slides.forEach(s => s.classList.remove('active'));
-                    dots.forEach(d => d.classList.remove('active'));
-                    slides[i].classList.add('active');
-                    dots[i].classList.add('active');
-                };
-                show(0);
+                const captions = [
+                    {
+                        title: "Precision Engineering",
+                        subtitle: "Built for performance",
+                        text: "Delivering reliable, precise bulk-handling solutions that optimize industrial workflows."
+                    },
+                    {
+                        title: "Advanced Machinery",
+                        subtitle: "State-of-the-art equipment",
+                        text: "VMC and HMC machines engineered for accuracy, repeatability, and long service life."
+                    },
+                    {
+                        title: "Expert Team",
+                        subtitle: "25+ years experience",
+                        text: "Experienced engineers offering turnkey solutions from design through erection and commissioning."
+                    },
+                    {
+                        title: "24/7 Support",
+                        subtitle: "Always available",
+                        text: "Round-the-clock assistance to keep your operations running smoothly and reliably."
+                    }
+                ];
 
-                let interval = setInterval(() => {
-                    current = (current + 1) % slides.length;
-                    show(current);
-                }, 2000); // 2000ms = 2 seconds
+                const container = document.querySelector('.hero-caption');
+                if (!container) return;
 
-                dots.forEach((dot, idx) => {
-                    dot.addEventListener('click', e => {
-                        e.preventDefault();
-                        current = idx;
-                        show(current);
-                        clearInterval(interval);
-                        interval = setInterval(() => {
-                            current = (current + 1) % slides.length;
-                            show(current);
-                        }, 2000);
-                    });
+                // create caption elements
+                captions.forEach((c, i) => {
+                    const item = document.createElement('div');
+                    item.className = 'caption-item' + (i === 0 ? ' active' : '');
+                    item.innerHTML = `
+                        <h1>${c.title}</h1>
+                        <h2>${c.subtitle}</h2>
+                        <p>${c.text}</p>
+                    `;
+                    container.appendChild(item);
                 });
+
+                // Add subtle backdrop for contrast (single element behind active captions)
+                const backdrop = document.createElement('div');
+                backdrop.className = 'caption-backdrop';
+                container.appendChild(backdrop);
+
+                let idx = 0;
+                const items = container.querySelectorAll('.caption-item');
+                const total = items.length;
+                setInterval(() => {
+                    items[idx].classList.remove('active');
+                    idx = (idx + 1) % total;
+                    items[idx].classList.add('active');
+                }, 3000); // change every 3 seconds
             })();
         </script>
+
     </section>
 
     <div class="h-cards">
@@ -132,7 +137,7 @@
         <div class="h-card">
             <div class="h-c-logo"><img src="img/card-t.png" alt="team"></div>
             <div>
-                <h1>24/7 Customer Support</h1>
+                <h1>24/7 Support</h1>
             </div>
             <div>
                 <h4>Call us on our 24 x 7 helpline to contact for any enquires!</h4>
@@ -142,17 +147,16 @@
             </div>
         </div>
     </div>
-    </div>
     <div class="about-section content">
         <div class="about-entry">
             <div class="about-content-wrapper clearfix">
                 <div class="about-image-container">
-                    <img src="img/abt.jpg" alt="About us" width="500" height="330" class="about-image">
+                    <img src="img/logo.webp" alt="About us" width="500" height="330" class="about-image">
                 </div>
                 <div class="about-text-container">
-                    <h2>About Koenig Conveyors Private Limited</h2>
+                    <h2>About Koenig Enterprices Private Limited</h2>
                     <p>
-                        Koenig Conveyors Private Limited (KCPL) established in 2017 by Mr. K Balasingh Gnanaraj,
+                        Koenig Enterprices Private Limited (KCPL) established in 2017 by Mr. K Balasingh Gnanaraj,
                         Mechanical engineer with more than 25 years of experiences from reputed organisations M/s Fuller
                         India and M/s FLSmidth India who is expertise in design, engineering and supervision of erection
                         & commissioning in the field of Pneumatic and Mechanical bulk handling system.
@@ -163,7 +167,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div class="machine-section">
