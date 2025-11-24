@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="container">
+
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="slide">
+                    <video autoplay loop muted playsinline class="s-vdo">
+                        <source src="img/home.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="hero-caption" aria-live="polite">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                const captions = [
+                    {
+                        title: "Precision Engineering",
+                        subtitle: "Built for performance",
+                        text: "Delivering reliable, precise bulk-handling solutions that optimize industrial workflows."
+                    },
+                    {
+                        title: "Advanced Machinery",
+                        subtitle: "State-of-the-art equipment",
+                        text: "VMC and HMC machines engineered for accuracy, repeatability, and long service life."
+                    },
+                    {
+                        title: "Expert Team",
+                        subtitle: "25+ years experience",
+                        text: "Experienced engineers offering turnkey solutions from design through erection and commissioning."
+                    },
+                    {
+                        title: "24/7 Support",
+                        subtitle: "Always available",
+                        text: "Round-the-clock assistance to keep your operations running smoothly and reliably."
+                    }
+                ];
+
+                const container = document.querySelector('.hero-caption');
+                if (!container) return;
+
+                // create caption elements
+                captions.forEach((c, i) => {
+                    const item = document.createElement('div');
+                    item.className = 'caption-item' + (i === 0 ? ' active' : '');
+                    item.innerHTML = `
+                        <h1>${c.title}</h1>
+                        <h2>${c.subtitle}</h2>
+                        <p>${c.text}</p>
+                    `;
+                    container.appendChild(item);
+                });
+
+                // Add subtle backdrop for contrast (single element behind active captions)
+                const backdrop = document.createElement('div');
+                backdrop.className = 'caption-backdrop';
+                container.appendChild(backdrop);
+
+                let idx = 0;
+                const items = container.querySelectorAll('.caption-item');
+                const total = items.length;
+                setInterval(() => {
+                    items[idx].classList.remove('active');
+                    idx = (idx + 1) % total;
+                    items[idx].classList.add('active');
+                }, 3000); // change every 3 seconds
+            })();
+        </script>
+
+    </section>
+</body>
+
+</html>
