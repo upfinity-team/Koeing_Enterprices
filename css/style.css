@@ -39,7 +39,7 @@ body {
 }
 
 .btn:hover {
-    color: #5d3eff !important;
+    color: #2d6393 !important;
     border-radius: 4px;
     transition: color 0.3s;
     background: none !important;
@@ -117,7 +117,7 @@ nav {
 .hero-caption {
     position: absolute;
     margin-left: 300px;
-    bottom: 65%;
+    bottom: 60%;
     transform: translateX(-50%);
     max-width: 900px;
     width: calc(100% - 40px);
@@ -170,18 +170,6 @@ nav {
     opacity: 0.95;
 }
 
-/* Small translucent backdrop for legibility */
-.caption-backdrop {
-    position: absolute;
-    inset: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.38));
-    border-radius: 8px;
-    z-index: -1;
-    filter: blur(6px);
-}
 
 /* Make sure caption scales well on small screens */
 @media (max-width: 520px) {
@@ -212,18 +200,14 @@ nav {
     --base-g: 99;
     --base-b: 147;
     display: flex;
-    gap: 28px;
-    justify-content: space-between;
     flex-wrap: nowrap;
-    max-width: 1200px;
-    max-height: 500px;
+    max-width: 1000px;
+    max-height: 400px;
     margin: 40px auto;
 }
 
 .h-card {
     background: linear-gradient(135deg, rgba(45, 99, 147, 0.12) 0%, rgba(45, 99, 147, 0.04) 100%);
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     padding: 22px;
     box-sizing: border-box;
     text-align: center;
@@ -232,36 +216,24 @@ nav {
 }
 
 .h-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-15px);
     box-shadow: 0 12px 30px rgba(13, 41, 64, 0.18);
 }
 
 .h-card:nth-child(1) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.30) 0%, rgba(45, 99, 147, 0.10) 100%);
+    background: #053061
 }
 
 .h-card:nth-child(2) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.24) 0%, rgba(45, 99, 147, 0.09) 100%);
+    background: #094385
 }
 
 .h-card:nth-child(3) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.18) 0%, rgba(45, 99, 147, 0.07) 100%);
+    background: #1257a5
 }
 
 .h-card:nth-child(4) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.14) 0%, rgba(45, 99, 147, 0.055) 100%);
-}
-
-.h-card:nth-child(5) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.10) 0%, rgba(45, 99, 147, 0.04) 100%);
-}
-
-.h-card:nth-child(6) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.07) 0%, rgba(45, 99, 147, 0.03) 100%);
-}
-
-.h-card:nth-child(n+7) {
-    background: linear-gradient(135deg, rgba(45, 99, 147, 0.05) 0%, rgba(45, 99, 147, 0.02) 100%);
+    background: #157bef
 }
 
 .h-card .h-c-logo img {
