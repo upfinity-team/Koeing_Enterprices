@@ -10,15 +10,93 @@
 
 <body>
     <nav>
-        <img class="nav-logo" src="img/logo.webp" alt="Logo">
+        <img class="nav-logo" src="img/logo.png" alt="Logo">
 
         <div class="nav-gap" id="nav-links">
+
             <a href="index.html" class="btn">HOME</a>
             <a href="about.html" class="btn">ABOUT US</a>
-            <a href="#contact" class="btn">PRODUCTS</a>
+            <div class="dropdown">
+                <a href="#" class="btn">PRODUCTS</a>
+                <div class="dropdown-menu">
+
+                    <div class="sub-dropdown">
+                        <a href="#">Pneumatic Conveying System</a>
+                        <div class="sub-dropdown-menu">
+                            <a href="#">Pressure Tank Systems</a>
+                            <a href="#">Pneumatic Ship Unloader</a>
+                            <a href="#">Koenig Pump</a>
+                            <a href="#">Koenig Airlift</a>
+                        </div>
+                    </div>
+
+                    <div class="sub-dropdown">
+                        <a href="#">Blending and Storage Systems</a>
+                        <div class="sub-dropdown-menu">
+                            <a href="#">Koenig Blending Silos</a>
+                            <a href="#">Koenig Storage Silos</a>
+                            <a href="#">Bin Weighing and Dozing System</a>
+                            <a href="#">Koenig PneuSlide</a>
+                        </div>
+                    </div>
+
+                    <div class="sub-dropdown">
+                        <a href="#">Mechanical Conveyors</a>
+                        <div class="sub-dropdown-menu">
+                            <a href="#">Belt Conveyors</a>
+                            <a href="#">Pipe Conveyors</a>
+                            <a href="#">Belt Feeders</a>
+                            <a href="#">Apron Feeders</a>
+                            <a href="#">Screw Conveyors</a>
+                            <a href="#">Chain Conveyors</a>
+                            <a href="#">Bucket Elevators</a>
+                        </div>
+                    </div>
+
+                    <div class="sub-dropdown">
+                        <a href="#">Gates and Valves</a>
+                        <div class="sub-dropdown-menu">
+                            <a href="#">Koenig Arc Valve</a>
+                            <a href="#">Koenig Flow Control Valves</a>
+                            <a href="#">Koenig Rotary Valves</a>
+                            <a href="#">Koenig Lump Breaker</a>
+                            <a href="#">Koenig Slide Gates</a>
+                            <a href="#">Koenig Knife Gates</a>
+                            <a href="#">Koenig Diverting Gates</a>
+                            <a href="#">Clamshell / Sector Gates</a>
+                            <a href="#">Koenig Rod Gates</a>
+                            <a href="#">Koenig Flap Gates</a>
+                        </div>
+                    </div>
+
+                    <div class="sub-dropdown">
+                        <a href="#">Stockyard Systems</a>
+                        <div class="sub-dropdown-menu">
+                            <a href="#">Stacker</a>
+                            <a href="#">Reclaimer</a>
+                            <a href="#">Ship Loader</a>
+                            <a href="#">Ship Unloader</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             <a href="#services" class="btn">SERVICES</a>
             <a href="projects" class="btn">PROJECTS</a>
-            <a href="gallery" class="btn">GALLERY</a>
+            <div class="dropdown">
+                <a href="#" class="btn">GALLERY</a>
+                <div class="dropdown-menu">
+                    <a href="#">Diverter Gate</a>
+                    <a href="#">Belt Conveyor</a>
+                    <a href="#">Bucket Elevator</a>
+                    <a href="#">Clamshell Bucket</a>
+                    <a href="#">Rotary Air Lock</a>
+                </div>
+            </div>
+
+
             <a href="contact" class="btn">CONTACT US</a>
         </div>
     </nav>
@@ -37,23 +115,74 @@
         <div class="about-entry">
             <div class="about-content-wrapper clearfix">
                 <div class="about-image-container">
-                    <img src="img/logo.webp" alt="About us" width="500" height="330" class="about-image">
+                    <img src="img/logo.png" alt="About us" width="500" height="330" class="about-image">
                 </div>
                 <div class="about-text-container">
-                    <h2>About Koenig Enterprises Private Limited</h2>
+                    <h2>About Koeniga Enterprices Private Limited</h2>
                     <p>
-                        Koenig Enterprises Private Limited (KCPL) was established in 2017 by
-                        Mr. K Balasingh Gnanaraj, a Mechanical Engineer with more than 25 years
-                        of experience at reputed organisations M/s Fuller India and
-                        M/s FLSmidth India. He specializes in design, engineering, erection
-                        supervision & commissioning of Pneumatic and Mechanical Bulk Handling Systems.
+                        Koenig Enterprices Private Limited (KCPL) established in 2017 by Mr. K Balasingh Gnanaraj,
+                        Mechanical engineer with more than 25 years of experiences from reputed organisations M/s Fuller
+                        India and M/s FLSmidth India who is expertise in design, engineering and supervision of erection
+                        & commissioning in the field of Pneumatic and Mechanical bulk handling system.
+
+
                     </p>
                     <a href="about.html" class="about-button">Learn More</a>
                 </div>
             </div>
         </div>
-    </div>
 
+        <section class="visitor-count">
+            <div class="counter">
+                <div class="counter-icon" style="background-image: url('img/visitors.png');"></div>
+                <h2 data-target="12500">0</h2>
+                <p>Visitors</p>
+            </div>
+            <div class="counter">
+                <div class="counter-icon" style="background-image: url('img/projects.png');"></div>
+                <h2 data-target="3200">0</h2>
+                <p>Projects</p>
+            </div>
+            <div class="counter">
+                <div class="counter-icon" style="background-image: url('img/clients.png');"></div>
+                <h2 data-target="850">0</h2>
+                <p>Clients</p>
+            </div>
+            <div class="counter">
+                <div class="counter-icon" style="background-image: url('img/years.png');"></div>
+                <h2 data-target="15">0</h2>
+                <p>Experience</p>
+            </div>
+
+            <script>
+                const counters = document.querySelectorAll('.visitor-count .counter h2');
+
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const increment = target / 200;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                updateCount();
+                                observer.unobserve(counter);
+                            }
+                        });
+                    }, { threshold: 0.5 });
+                    observer.observe(counter);
+                });
+            </script>
+        </section>
+
+    </div>
 
     <div class="strengths-section">
 
