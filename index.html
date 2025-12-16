@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koeing Enterprices</title>
+    <title>Home | Koeing Enterprices</title>
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=Open+Sans:wght@300;400;600&display=swap"
@@ -91,7 +91,7 @@
             </div>
 
 
-            <a href="#services" class="btn">SERVICES</a>
+            <a href="services.html" class="btn">SERVICES</a>
             <a href="projects" class="btn">PROJECTS</a>
             <div class="dropdown">
                 <a href="#" class="btn">GALLERY</a>
@@ -105,7 +105,7 @@
             </div>
 
 
-            <a href="contact" class="btn">CONTACT US</a>
+            <a href="contact.html" class="btn">CONTACT US</a>
         </div>
     </nav>
 
@@ -229,13 +229,14 @@
                 <h1>24/7 Support</h1>
             </div>
             <div>
-                <h4>Call us on our 24 x 7 helpline to contact for any enquires!</h4>
+                <h4>Contact us on our 24 x 7 helpline to contact for any enquires!</h4>
             </div>
             <div class="h-card-action">
                 <button class="view-more" type="button">View More</button>
             </div>
         </div>
     </div>
+    
     <div class="about-section content">
         <div class="about-entry">
             <div class="about-content-wrapper clearfix">
@@ -252,29 +253,37 @@
 
 
                     </p>
-                    <a href="about.html" class="about-button">Learn More</a>
+                    <a href="about.html" class="view-more">Learn More</a>
                 </div>
             </div>
         </div>
 
         <section class="visitor-count">
+            <div class="section-header">
+                <h2>OUR ACHIEVEMENTS</h2>
+                <h1>Some Interesting Facts</h1>
+            </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/visitors.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/4514/4514958.png');"></div>
                 <h2 data-target="12500">0</h2>
                 <p>Visitors</p>
             </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/projects.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/13727/13727678.png');"></div>
                 <h2 data-target="3200">0</h2>
                 <p>Projects</p>
             </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/clients.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/8188/8188407.png');"></div>
                 <h2 data-target="850">0</h2>
                 <p>Clients</p>
             </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/years.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/2359/2359722.png');"></div>
                 <h2 data-target="15">0</h2>
                 <p>Experience</p>
             </div>
@@ -285,13 +294,13 @@
                 counters.forEach(counter => {
                     const updateCount = () => {
                         const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
+                        const count = +counter.innerText.replace('+', '');
                         const increment = target / 200;
                         if (count < target) {
                             counter.innerText = Math.ceil(count + increment);
                             requestAnimationFrame(updateCount);
                         } else {
-                            counter.innerText = target;
+                            counter.innerText = target + '+';
                         }
                     };
                     const observer = new IntersectionObserver(entries => {
@@ -321,28 +330,28 @@
                 <img src="img/pt-sys.png" alt="">
                 <div class="top-blue-line"></div>
                 <div class="machine-title">Pneumatic Conveying System</div>
-                <a href="#" class="machine-btn">Read More</a>
+                <a href="#" class="view-more">Read More</a>
             </div>
 
             <div class="machine-box">
                 <img src="img/Bin-Weighing-and-Dozing-System.png" alt="">
                 <div class="top-blue-line"></div>
                 <div class="machine-title">Blending & Storage System</div>
-                <a href="#" class="machine-btn">Read More</a>
+                <a href="#" class="view-more">Read More</a>
             </div>
 
             <div class="machine-box">
                 <img src="img/Apron-Feeders.png" alt="">
                 <div class="top-blue-line"></div>
                 <div class="machine-title">Mechanical Conveyors</div>
-                <a href="#" class="machine-btn">Read More</a>
+                <a href="#" class="view-more"">Read More</a>
             </div>
 
             <div class="machine-box">
                 <img src="img/Koenig-Arc-Valve.png" alt="">
                 <div class="top-blue-line"></div>
                 <div class="machine-title">Gates & Valves</div>
-                <a href="#" class="machine-btn">Read More</a>
+                <a href="#" class="view-more">Read More</a>
             </div>
 
         </div>
@@ -356,32 +365,38 @@
         <div class="strengths-grid">
 
             <div class="strength-box">
-                <img src="img/cup.png" alt="" style="display:block;margin:0 auto;">
+                <img src="img/yrs_exp.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">30+ Years Experience</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/t-up.png" alt="" style="display:block;margin:0 auto;">
+                <img src="img/quality_assurance.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Quality Assurance</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/card-t.png" alt="" style="display:block;margin:0 auto;">
+                <img src="img/expert_team.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Expert Team</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/cr-card.png" alt="" style="display:block;margin:0 auto;">
+                <img src="img/competitive_price.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Competitive Price</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/clock.png" alt="" style="display:block;margin:0 auto;">
+                <img src="img/customer_support.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Customer Support 24/7</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/idea.png" alt="" style="display:block;margin:0 auto;">
+                <img src="img/soat_tech.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">State of the Art Technology</div>
             </div>
 
