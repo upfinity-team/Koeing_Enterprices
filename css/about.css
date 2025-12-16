@@ -56,20 +56,28 @@ img {
     width: 100%;
 }
 
-/* -----------------------------------
-   NAVIGATION
------------------------------------ */
+/* -----------------
+    NAVIGATION  
+   ----------------- */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px 20px 15px;
-    background: transparent url("../img/nav-bg.jpg") center/cover no-repeat;
     flex-wrap: wrap;
+    background-color: transparent;
+    background-image: none;
+    padding: 15px 60px 20px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .nav-logo {
     height: 50px;
+    width: auto;
     object-fit: contain;
 }
 
@@ -77,14 +85,100 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-gap a {
-    color: rgb(40, 40, 40);
+    color: #ffffff;
     font-weight: 700;
     margin-left: 18px;
     font-size: 16px;
-    font-family: system-ui, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-gap a:hover {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    color: #222 !important;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+}
+
+.dropdown-menu a:hover {
+    background: #f2f2f2;
+    color: #157bef !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown a {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.sub-dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(0);
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    min-width: 150px;
+    padding: 8px 0;
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    z-index: 1000;
+}
+
+.sub-dropdown-menu a {
+    padding: 10px 15px;
+    color: #222 !important;
+    font-weight: 600;
+}
+
+.sub-dropdown-menu a:hover {
+    background: #f2f2f2;
+    color: #157bef !important;
+}
+
+.sub-dropdown:hover .sub-dropdown-menu {
+    display: flex;
 }
 
 /* ============================
@@ -95,13 +189,10 @@ nav {
     width: 100%;
     height: 60vh;
     min-height: 350px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    /* Overlay + background image */
     background: 
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url('img/about-bg.webp') center/cover no-repeat;
@@ -109,23 +200,18 @@ nav {
     padding: 40px 20px;
 }
 
-/* Glass card */
 .about-banner-content {
     max-width: 700px;
     padding: 35px 40px;
-
     background: rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
     border-radius: 18px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-
     opacity: 0;
     animation: fadeUp 1.2s ease forwards;
 }
 
-/* Heading */
 .about-banner-content h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -133,7 +219,6 @@ nav {
     margin-bottom: 12px;
 }
 
-/* Subtext */
 .about-banner-content p {
     font-size: 1.15rem;
     line-height: 1.75;
@@ -141,7 +226,6 @@ nav {
     margin: 0;
 }
 
-/* Fade-in animation */
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -153,7 +237,6 @@ nav {
     }
 }
 
-/* Responsive */
 @media (max-width: 520px) {
     .about-banner {
         height: 45vh;
