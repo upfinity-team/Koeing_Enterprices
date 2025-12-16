@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koeing Enterprices</title>
+    <title>About | Koeing Enterprices</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -83,7 +83,7 @@
             </div>
 
 
-            <a href="#services" class="btn">SERVICES</a>
+            <a href="services.html" class="btn">SERVICES</a>
             <a href="projects" class="btn">PROJECTS</a>
             <div class="dropdown">
                 <a href="#" class="btn">GALLERY</a>
@@ -97,19 +97,18 @@
             </div>
 
 
-            <a href="contact" class="btn">CONTACT US</a>
+            <a href="contact.html" class="btn">CONTACT US</a>
         </div>
     </nav>
 
-    <section class="about-banner">
-        <div class="about-banner-content">
-            <h1>About Us</h1>
-            <p>
-                Built on precision, powered by innovation — we design and engineer solutions
-                that move industries forward.
-            </p>
+    <div class="top-banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Welcome to Koenig Enterprises Pvt Ltd</h1>
+            <p>Experts in Pneumatic & Mechanical Bulk Handling Systems</p>
         </div>
-    </section>
+    </div>
+
 
     <div class="about-section content">
         <div class="about-entry">
@@ -117,7 +116,7 @@
                 <div class="about-image-container">
                     <img src="img/logo.png" alt="About us" width="500" height="330" class="about-image">
                 </div>
-                <div class="about-text-container">
+                <div class="about-text-container bg-blur">
                     <h2>About Koenig Enterprices Private Limited</h2>
                     <p>
                         Koenig Enterprices Private Limited (KCPL) established in 2017 by Mr. K Balasingh Gnanaraj,
@@ -127,29 +126,37 @@
 
 
                     </p>
-                    <a href="about.html" class="about-button">Learn More</a>
+                    <a href="about.html" class="view-more">Learn More</a>
                 </div>
             </div>
         </div>
 
         <section class="visitor-count">
+            <div class="section-header">
+                <h2>OUR ACHIEVEMENTS</h2>
+                <h1>Some Interesting Facts</h1>
+            </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/visitors.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/4514/4514958.png');"></div>
                 <h2 data-target="12500">0</h2>
                 <p>Visitors</p>
             </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/projects.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/13727/13727678.png');"></div>
                 <h2 data-target="3200">0</h2>
                 <p>Projects</p>
             </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/clients.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/8188/8188407.png');"></div>
                 <h2 data-target="850">0</h2>
                 <p>Clients</p>
             </div>
             <div class="counter">
-                <div class="counter-icon" style="background-image: url('img/years.png');"></div>
+                <div class="counter-icon"
+                    style="background-image: url('https://cdn-icons-png.flaticon.com/512/2359/2359722.png');"></div>
                 <h2 data-target="15">0</h2>
                 <p>Experience</p>
             </div>
@@ -160,13 +167,13 @@
                 counters.forEach(counter => {
                     const updateCount = () => {
                         const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
+                        const count = +counter.innerText.replace('+', '');
                         const increment = target / 200;
                         if (count < target) {
                             counter.innerText = Math.ceil(count + increment);
                             requestAnimationFrame(updateCount);
                         } else {
-                            counter.innerText = target;
+                            counter.innerText = target + '+';
                         }
                     };
                     const observer = new IntersectionObserver(entries => {
@@ -192,32 +199,38 @@
         <div class="strengths-grid">
 
             <div class="strength-box">
-                <img src="img/cup.png" alt="" style="display:block;margin:0 auto;">
+                <img src="https://cdn-icons-png.flaticon.com/512/16463/16463966.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">30+ Years Experience</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/t-up.png" alt="" style="display:block;margin:0 auto;">
+                <img src="https://cdn-icons-png.flaticon.com/512/11125/11125966.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Quality Assurance</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/card-t.png" alt="" style="display:block;margin:0 auto;">
+                <img src="https://cdn-icons-png.flaticon.com/512/15175/15175687.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Expert Team</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/cr-card.png" alt="" style="display:block;margin:0 auto;">
+                <img src="https://cdn-icons-png.flaticon.com/512/12513/12513015.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Competitive Price</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/clock.png" alt="" style="display:block;margin:0 auto;">
+                <img src="https://cdn-icons-png.flaticon.com/512/8743/8743839.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">Customer Support 24/7</div>
             </div>
 
             <div class="strength-box">
-                <img src="img/idea.png" alt="" style="display:block;margin:0 auto;">
+                <img src="https://cdn-icons-png.flaticon.com/512/12148/12148700.png" alt=""
+                    style="display:block;margin:0 auto;">
                 <div class="strength-text">State of the Art Technology</div>
             </div>
 
