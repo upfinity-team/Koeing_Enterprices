@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Our Services | Koenig Enterprices</title>
+    <link rel="stylesheet" href="css/services.css">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
             </div>
 
 
-            <a href="#services" class="btn">SERVICES</a>
+            <a href="services.html" class="btn">SERVICES</a>
             <a href="projects" class="btn">PROJECTS</a>
             <div class="dropdown">
                 <a href="#" class="btn">GALLERY</a>
@@ -97,83 +97,139 @@
             </div>
 
 
-            <a href="contact" class="btn">CONTACT US</a>
+            <a href="contact.html" class="btn">CONTACT US</a>
         </div>
     </nav>
 
-    <section class="container">
+    <div>
+        <section class="page-hero">
+            <div class="page-overlay"></div>
+            <h1>Services</h1>
+            <p>You are here: Home / Services</p>
+        </section>
 
-        <div class="slider-wrapper">
-            <div class="slider">
-                <div class="slide">
-                    <video autoplay loop muted playsinline class="s-vdo">
-                        <source src="img/home.webm" type="video/webm">
-                        Your browser does not support the video tag.
-                    </video>
+        <!-- MAIN CONTENT -->
+        <section class="service-container">
 
-                    <div class="hero-caption" aria-live="polite">
-                    </div>
+            <!-- ENGINEERING -->
+            <div class="service-block">
+                <h2>Engineering</h2>
+
+                <div class="service-image-row">
+                    <img src="img/eng1.jpg">
+                    <img src="img/eng2.jpg">
                 </div>
+
+                <p>
+                    Koenig provides every customer with complete Belt / Pipe conveyor engineering services.
+                    Our experienced staff of engineers is available to help you increase profitability, design better or
+                    new
+                    components and systems, and increase production.
+                </p>
+
+                <h3>Engineering Services with Fresh Perspective</h3>
+                <p>
+                    Our engineers work closely with you, Sales and the manufacturing team. Our unique project management
+                    style involves leaders from all phases of the project.
+                </p>
+
+                <h3>New and Redesigned Applications</h3>
+                <p>
+                    Koenig conveyor engineering services range from consulting with customers on the integrity of a new
+                    design to providing custom redesign of existing equipment.
+                </p>
             </div>
+
+            <!-- PRODUCTION -->
+            <div class="service-block">
+                <h2>Production</h2>
+
+                <div class="service-image-row">
+                    <img src="img/prod1.jpg">
+                    <img src="img/prod2.jpg">
+                </div>
+
+                <p>
+                    Koenig provides manufacturing services for a broad array of material-handling products.
+                    Each manufacturing process allows us to manufacture custom components required for conveyor systems.
+                </p>
+
+                <ul>
+                    <li>Fabrication</li>
+                    <li>Turning</li>
+                    <li>Laser Cut</li>
+                </ul>
+
+                <h3>Diverse Product Line & Design Options</h3>
+                <p>
+                    Our diverse product line gives our customers the opportunity to compare various material handling
+                    systems to determine best-fit requirements.
+                </p>
+
+                <h3>Quality Conveyor Manufacturing Services</h3>
+                <p>
+                    Koenig Conveyors is unparalleled in manufacturing capability. Customers enjoy exact replication of
+                    replacement parts and original equipment quality.
+                </p>
+
+                <h3>Custom Components and Spares</h3>
+                <p>
+                    Koenig manufactures custom conveyor systems and spare parts to match your specifications.
+                </p>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <img src="img/logo.png" alt="Koenig Conveyors" class="footer-logo">
+
+                <p class="footer-text">
+                    Koenig Conveyors Private Limited (KCPL) established in 2017 by
+                    Mr. K Balasingh Gnanaraj, Mechanical engineer with more than
+                    25 years of experience.
+                </p>
+
+                <a href="#" class="read-more">READ MORE</a>
+            </div>
+
+            <div class="footer-box">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3 class="footer-title">Contact Us</h3>
+                <p class="footer-text">
+                    No. 4/8, 10th Cross Street, Sastri Nagar,<br>
+                    Adyar, Chennai, 600020, India.
+                </p>
+                <p class="footer-text">+91 44 2446 1838</p>
+                <p class="footer-text">+91 9941 4905 80</p>
+                <p class="footer-text">koenigconveyors@gmail.com</p>
+                <p class="footer-text">info@koenigconveyors.com</p>
+            </div>
+
+            <div class="footer-box back-to-top-box">
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="top-btn">
+                    ↑
+                </button>
+            </div>
+
         </div>
 
-        <script>
-            (function () {
-                const captions = [
-                    {
-                        title: "Precision Engineering",
-                        subtitle: "Built for performance",
-                        text: "Delivering reliable, precise bulk-handling solutions that optimize industrial workflows."
-                    },
-                    {
-                        title: "Advanced Machinery",
-                        subtitle: "State-of-the-art equipment",
-                        text: "VMC and HMC machines engineered for accuracy, repeatability, and long service life."
-                    },
-                    {
-                        title: "Expert Team",
-                        subtitle: "25+ years experience",
-                        text: "Experienced engineers offering turnkey solutions from design through erection and commissioning."
-                    },
-                    {
-                        title: "24/7 Support",
-                        subtitle: "Always available",
-                        text: "Round-the-clock assistance to keep your operations running smoothly and reliably."
-                    }
-                ];
-
-                const container = document.querySelector('.hero-caption');
-                if (!container) return;
-
-                // create caption elements
-                captions.forEach((c, i) => {
-                    const item = document.createElement('div');
-                    item.className = 'caption-item' + (i === 0 ? ' active' : '');
-                    item.innerHTML = `
-                        <h1>${c.title}</h1>
-                        <h2>${c.subtitle}</h2>
-                        <p>${c.text}</p>
-                    `;
-                    container.appendChild(item);
-                });
-
-                // Add subtle backdrop for contrast (single element behind active captions)
-                const backdrop = document.createElement('div');
-                backdrop.className = 'caption-backdrop';
-                container.appendChild(backdrop);
-
-                let idx = 0;
-                const items = container.querySelectorAll('.caption-item');
-                const total = items.length;
-                setInterval(() => {
-                    items[idx].classList.remove('active');
-                    idx = (idx + 1) % total;
-                    items[idx].classList.add('active');
-                }, 3000); // change every 3 seconds
-            })();
-        </script>
-
-    </section>
+        <div class="footer-bottom">
+            Designed & Developed by <b>Alwin</b>
+        </div>
+    </footer>
 </body>
 
 </html>
